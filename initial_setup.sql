@@ -77,13 +77,13 @@ CREATE TABLE IF NOT EXISTS Book (
 -- BookCheckout table (Formerly "Inventory")
 CREATE TABLE IF NOT EXISTS BookCheckout (
     checkout_id INT PRIMARY KEY AUTO_INCREMENT,
-    isbn INT,
-    student_cwid INT,
+    isbn VARCHAR(20),
+    student_cwid VARCHAR(50),
     checkout_date DATE,
     due_date DATE,
     returned BOOLEAN DEFAULT FALSE,
     
-    UNIQUE (student_cwid, book_id, returned),
+    UNIQUE (student_cwid, isbn, returned),
     FOREIGN KEY (isbn) REFERENCES Book(isbn),
     FOREIGN KEY (student_cwid) REFERENCES Student(cwid)
 );
