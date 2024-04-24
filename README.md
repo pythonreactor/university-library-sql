@@ -1,4 +1,5 @@
-# UniversityLibrary (MySQL Workbench)
+# University Library SQL (MySQL Workbench)
+
 ## Setting Up
 1. Open the `initial_setup.sql` & `initial_junk_data.sql` scripts in MySQL Workbench
 2. Run `initial_setup.sql` and verify no errors
